@@ -5,7 +5,8 @@ var signature, parameters, apiKey, token, cartItems, paymentMethodId;
 $(function () {
   var helpers = {
     getToken: function () {
-      var url = 'http://newcents.glsys.com/merchant/authorize?api_key=' + apiKey;
+      console.log(apiKey)
+      var url = 'http://localhost:3000/merchant/authorize?api_key=' + apiKey;
       // var url = 'http://localhost:3000/client/authorize?api_key=' + apiKey + '&signature=' + signature + '&parameters=' + parameters;
       var xhr = new XMLHttpRequest();
       xhr.open('GET', url, false);
@@ -28,7 +29,7 @@ $(function () {
     },
     checkout: function () {
       var win = window.open('about:blank', 'Netcents Express Checkout', 'top=50px, left=300px, width=500px, height=700px, location=1, status=1, toolbar=0, menubar=0, resizable=0, scrollbars=1');
-      win.location = 'http://newcents.glsys.com/merchant/checkout?token=' + token + '&data=' + cartItems + '&paymentMethodId=' + paymentMethodId;
+      win.location = 'http://localhost:3000/merchant/checkout?token=' + token + '&data=' + cartItems + '&paymentMethodId=' + paymentMethodId;
       win.focus();
     }
   };
