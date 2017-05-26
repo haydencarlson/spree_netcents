@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_netcents_express_checkout'
-  s.version     = '3.0.1'
+  s.version     = '3.0.2'
   s.summary     = 'Net-Cents Express Checkout'
   s.description = 'Net-Cents Express Checkout'
   s.required_ruby_version = '>= 2.1.0'
