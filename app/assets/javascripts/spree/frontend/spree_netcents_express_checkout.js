@@ -1,11 +1,11 @@
-// Placeholder manifest file.
+
+ // Placeholder manifest file.
 // the installer will append this file to the app vendored assets here: vendor/assets/javascripts/spree/frontend/all.js'
 var signature, parameters, apiKey, token, cartItems, paymentMethodId;
-
+console.log('asd')
 $(function () {
   var helpers = {
     getToken: function () {
-      console.log(apiKey)
       var url = 'http://localhost:3000/merchant/authorize?api_key=' + apiKey;
       // var url = 'http://localhost:3000/client/authorize?api_key=' + apiKey + '&signature=' + signature + '&parameters=' + parameters;
       var xhr = new XMLHttpRequest();
@@ -28,8 +28,8 @@ $(function () {
       xhr.send();
     },
     checkout: function () {
-      var win = window.open('about:blank', 'Netcents Express Checkout', 'top=50px, left=300px, width=500px, height=700px, location=1, status=1, toolbar=0, menubar=0, resizable=0, scrollbars=1');
-      win.location = 'http://localhost:3000/merchant/checkout?token=' + token + '&data=' + cartItems + '&paymentMethodId=' + paymentMethodId;
+      var win = window.open('about:blank', 'Netcents Express Checkout', 'top=50px, left=300px, width=900px, height=570px, location=1, status=1, toolbar=0, menubar=0, resizable=0, scrollbars=1');
+      win.location = 'http://localhost:3000/merchant/checkout?token=' + token + '&data=' + cartItems + '&paymentMethodId=' + paymentMethodId + '&api_key=' + apiKey;
       win.focus();
     }
   };

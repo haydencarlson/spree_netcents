@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_netcents_express_checkout'
-  s.version     = '3.0.2'
+  s.version     = '3.0.3'
   s.summary     = 'Net-Cents Express Checkout'
   s.description = 'Net-Cents Express Checkout'
   s.required_ruby_version = '>= 2.1.0'
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   # s.homepage  = 'http://www.spreecommerce.com'
   s.license = 'BSD-3'
 
-  # s.files       = `git ls-files`.split("\n")
+  s.files       = `git ls-files`.split("\n")
   # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
