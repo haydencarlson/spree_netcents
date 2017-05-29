@@ -15,6 +15,7 @@ module Spree
     end
 
     def confirm
+      byebug
       order = current_order || raise(ActiveRecord::RecordNotFound)
       payment = order.payments.create!({
         source: Spree::NetcentsExpressCheckout.create({
@@ -33,7 +34,7 @@ module Spree
         payment.started_processing!
         payment.pend!
         payment.complete!
-        order.update!
+        order.update_with_updater!
         redirect_to completion_route(order)
       else
         redirect_to checkout_state_path(order.state)

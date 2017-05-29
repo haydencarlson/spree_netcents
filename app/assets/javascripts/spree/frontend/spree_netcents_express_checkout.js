@@ -2,7 +2,6 @@
  // Placeholder manifest file.
 // the installer will append this file to the app vendored assets here: vendor/assets/javascripts/spree/frontend/all.js'
 var signature, parameters, apiKey, token, cartItems, paymentMethodId;
-console.log('asd')
 $(function () {
   var helpers = {
     getToken: function () {
